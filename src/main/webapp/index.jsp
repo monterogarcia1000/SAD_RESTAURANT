@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.iesemilidarder.restaurants.web.Restaurant" %>
+<%@ page import="com.iesemilidarder.restaurants.web.ConexionBaseDeDatos" %>
+<%@page import="java.util.*" %>
+
 <!doctype html>
 <html lang="ca">
 <head>
@@ -56,6 +60,17 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
+
+            <%
+                ConexionBaseDeDatos conexionBaseDeDatos = new ConexionBaseDeDatos();
+                ArrayList rst = conexionBaseDeDatos.readRestaurant();
+                Iterator itr = rst.iterator();
+                while (itr.hasNext()){
+                    Restaurant rstt = (Restaurant) itr.next();
+                    out.println(rstt.getNombre() + " " + rstt.getDireccion() + " " + rstt.getWeb() + " " + rstt.getTelefono() + " " + rstt.getTipo()+"<br>");
+                }
+            %>
+
             <div class="col-md-4">
                 <img class="img-fluid" src="img/empty.png">
             </div>
