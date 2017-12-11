@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.iesemilidarder.restaurants.web.Restaurant" %>
 <%@ page import="com.iesemilidarder.restaurants.web.ConexionBaseDeDatos" %>
+<%@ page import="com.iesemilidarder.restaurants.web.TestServlet" %>
 <%@page import="java.util.*" %>
+<%@page import="java.lang.String" %>
 
 <!doctype html>
 <html lang="ca">
