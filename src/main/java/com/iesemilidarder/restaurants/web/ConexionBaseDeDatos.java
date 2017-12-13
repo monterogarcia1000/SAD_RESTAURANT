@@ -23,14 +23,16 @@ public class ConexionBaseDeDatos {
             Statement stmt = con.createStatement();
             ResultSet rs;
 
-            if (cercar == null && cercar.equals('?')) {
+            if (cercar == null || cercar.equals("")) {
 
-                rs = stmt.executeQuery("SELECT * FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RE.RES_NOM LIKE '?'");
+                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
+                        "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
 
 
             } else {
 
-                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
+                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
+                        "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RES.RES_NOM LIKE '?' ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
 
             }
 
