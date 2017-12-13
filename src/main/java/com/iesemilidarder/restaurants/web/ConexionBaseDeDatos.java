@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class ConexionBaseDeDatos {
 
+
     public ArrayList readRestaurant(String cercar) {
 
         ArrayList rst = new ArrayList();
@@ -32,7 +33,7 @@ public class ConexionBaseDeDatos {
             } else {
 
                 rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
-                        "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RES.RES_NOM LIKE '?' ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
+                        "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RE.RES_NOM LIKE '%" + cercar + "%' ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
 
             }
 
