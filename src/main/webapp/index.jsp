@@ -41,8 +41,8 @@
                 <a class="nav-link" href="test">Enllaç 2</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Cercar" aria-label="Cercar">
+        <form action="index.jsp" method="get" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="cercar" type="text" placeholder="Cercar" aria-label="Cercar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cercar</button>
         </form>
     </div>
@@ -63,7 +63,7 @@
         <!-- Example row of columns -->
         <%
             ConexionBaseDeDatos conexionBaseDeDatos = new ConexionBaseDeDatos();
-            ArrayList rst = conexionBaseDeDatos.readRestaurant();
+            ArrayList rst = conexionBaseDeDatos.readRestaurant(request.getParameter("cercar"));
             Iterator itr = rst.iterator();
             while (itr.hasNext()){
                 Restaurant rstt = (Restaurant) itr.next();

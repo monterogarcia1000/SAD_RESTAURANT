@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class ConexionBaseDeDatos {
 
-    public ArrayList readRestaurant(){
+    public ArrayList readRestaurant(String cercar) {
 
         ArrayList rst = new ArrayList();
 
@@ -18,11 +18,21 @@ public class ConexionBaseDeDatos {
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
 
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@35.205.41.45:1521:XE", "usuari","usuari");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@35.205.41.45:1521:XE", "usuari", "usuari");
 
             Statement stmt = con.createStatement();
+            ResultSet rs;
 
-            ResultSet rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
+            if (cercar == null && cercar.equals('?')) {
+
+                rs = stmt.executeQuery("SELECT  RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RES_NOM=?");
+
+
+            } else {
+
+                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
+
+            }
 
             while (rs.next()) {
 
