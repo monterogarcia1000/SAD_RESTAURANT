@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class ConexionBaseDeDatos {
 
-
+//Le pasamos al lector de base de datos el parametro que queremos utilizar para buscar en nuestro formulario
     public ArrayList readRestaurant(String cercar) {
 
         ArrayList rst = new ArrayList();
@@ -24,7 +24,11 @@ public class ConexionBaseDeDatos {
             Statement stmt = con.createStatement();
             ResultSet rs;
 
+//Le decimos como queremos que actue cuando le llega el parametro vacio y cuando le llega con lo que queremos buscar
+
             if (cercar == null || cercar.equals("")) {
+
+//Asi actua el programa cuando el parametro le llega vacio
 
                 rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
                         "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
@@ -32,10 +36,14 @@ public class ConexionBaseDeDatos {
 
             } else {
 
+//Asi actua el programa cuando el parametro le llega con lo que queremos buscar
+
                 rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
                         "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RE.RES_NOM LIKE '%" + cercar + "%' ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
 
             }
+
+//Guarda los datos que extrae de la base de datos
 
             while (rs.next()) {
 

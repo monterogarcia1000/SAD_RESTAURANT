@@ -41,6 +41,9 @@
                 <a class="nav-link" href="test">Enllaç 2</a>
             </li>
         </ul>
+
+<!-- Formulario para la busqueda de restaurantes -->
+
         <form action="index.jsp" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" name="cercar" type="text" placeholder="Cercar" aria-label="Cercar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cercar</button>
@@ -60,7 +63,7 @@
     </div>
 
     <div class="container">
-        <!-- Example row of columns -->
+        <!-- Mostramos por pantalla los contenidos de la base de datos -->
         <%
             ConexionBaseDeDatos conexionBaseDeDatos = new ConexionBaseDeDatos();
             ArrayList rst = conexionBaseDeDatos.readRestaurant(request.getParameter("cercar"));
