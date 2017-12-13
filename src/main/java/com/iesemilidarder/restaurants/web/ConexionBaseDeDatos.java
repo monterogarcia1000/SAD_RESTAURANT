@@ -25,7 +25,7 @@ public class ConexionBaseDeDatos {
 
             if (cercar == null && cercar.equals('?')) {
 
-                rs = stmt.executeQuery("SELECT  RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RES_NOM=?");
+                rs = stmt.executeQuery("SELECT * FROM RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RE.RES_NOM LIKE '?'");
 
 
             } else {

@@ -41,7 +41,7 @@
                 <a class="nav-link" href="test">Enllaç 2</a>
             </li>
         </ul>
-        <form action="index.jsp" method="get" class="form-inline my-2 my-lg-0">
+        <form action="index.jsp" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" name="cercar" type="text" placeholder="Cercar" aria-label="Cercar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cercar</button>
         </form>
@@ -87,7 +87,7 @@
 </main>
 
 <footer class="container">
-    <p>&copy; Nom de l'alumne 2017</p>
+    <p>&copy; Iván Montero García 2017</p>
 </footer>
 
 <!-- Optional JavaScript -->
