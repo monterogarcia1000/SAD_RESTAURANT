@@ -82,7 +82,7 @@
                         "<p><a class='btn btn-secondary' href='test' role='button'>Més informació &raquo;</a></p>" +
                         "</div>");
                 out.println("</div>");
-            }
+            } 
         %>
         <hr>
 
