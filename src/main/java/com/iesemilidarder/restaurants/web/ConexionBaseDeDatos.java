@@ -30,7 +30,7 @@ public class ConexionBaseDeDatos {
 
 //Asi actua el programa cuando el parametro le llega vacio
 
-                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
+                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RE.RES_URL_IMG, RR.TRS_DESCRIPCIO FROM " +
                         "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
 
 
@@ -38,7 +38,7 @@ public class ConexionBaseDeDatos {
 
 //Asi actua el programa cuando el parametro le llega con lo que queremos buscar
 
-                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RR.TRS_DESCRIPCIO FROM " +
+                rs = stmt.executeQuery("SELECT * FROM (SELECT RE.RES_NOM, RE.RES_ADRECA, RE.RES_WEB, RE.RES_TELEFON, RE.RES_URL_IMG, RR.TRS_DESCRIPCIO FROM " +
                         "RESTAURANTS RE, TRESTAURANTS RR WHERE RE.RES_TRS_CODI = RR.TRS_CODI AND RE.RES_NOM LIKE '%" + cercar + "%' ORDER BY RES_MITJANA DESC)where ROWNUM <= 5");
 
             }
@@ -54,6 +54,7 @@ public class ConexionBaseDeDatos {
                 rstt.setWeb(rs.getString("RES_WEB"));
                 rstt.setTelefono(rs.getString("RES_TELEFON"));
                 rstt.setTipo(rs.getString("TRS_DESCRIPCIO"));
+                rstt.setUrl_imagen(rs.getString("RES_URL_IMG"));
 
                 rst.add(rstt);
 

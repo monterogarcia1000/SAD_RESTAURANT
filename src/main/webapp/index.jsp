@@ -72,7 +72,7 @@
                 Restaurant rstt = (Restaurant) itr.next();
                 out.println("<div class='row'>");
                 out.println("<div class='col-md-4'>" +
-                        "<img class='img-fluid' src='img/empty.png'>" +
+                        "<img class='img-fluid' src='"+ rstt.getUrl_imagen() +"'>" +
                         "</div>");
                 out.println("<div class='col-md-8'><h2>" + rstt.getNombre() +
                         "</h2>" + "<p>" + rstt.getDireccion() + "</p>" +
