@@ -28,7 +28,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <div class="dropdown">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
@@ -60,7 +60,6 @@
         <div class="container">
             <h1 class="display-3">RESTAURANTS DARDER</h1>
             <p>Aquesta es una pagina on podras trobar els millors restaurants de les Illes Balears</p>
-            <p><a class="btn btn-primary btn-lg" href="test" role="button">Learn more &raquo;</a></p>
         </div>
     </div>
 
