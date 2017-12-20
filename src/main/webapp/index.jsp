@@ -29,14 +29,27 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Inici <span class="sr-only">(current)</span></a>
             </li>
-        </ul>
+        </ul>-->
 
-<!-- Formulario para la busqueda de restaurantes -->
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Tipus de restaurants
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Chines</a>
+                <a class="dropdown-item" href="#">Italia</a>
+                <a class="dropdown-item" href="#">Japones</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario para la busqueda de restaurantes -->
 
         <form action="index.jsp" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" name="cercar" type="text" placeholder="Cercar" aria-label="Cercar">
