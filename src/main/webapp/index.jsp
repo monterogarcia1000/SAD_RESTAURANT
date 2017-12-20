@@ -28,22 +28,17 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Inici <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>-->
-
+    
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
                 Tipus de restaurants
             </button>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Chines</a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Italia</a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Japones</a>
             </div>
         </div>
