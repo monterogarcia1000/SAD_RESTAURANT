@@ -50,7 +50,7 @@
             <input class="form-control mr-sm-2" name="cercar" type="text" placeholder="Cercar" aria-label="Cercar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cercar</button>
         </form>
-    </div>
+
 </nav>
 
 <main role="main">
