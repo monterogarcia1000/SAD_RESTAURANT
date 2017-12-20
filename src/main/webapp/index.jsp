@@ -34,12 +34,6 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Inici <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="test">Enllaç 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="test">Enllaç 2</a>
-            </li>
         </ul>
 
 <!-- Formulario para la busqueda de restaurantes -->
@@ -56,8 +50,8 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <h1 class="display-3">RESTAURANTS DARDER</h1>
+            <p>Aquesta es una pagina on podras trobar els millors restaurants de les Illes Balears</p>
             <p><a class="btn btn-primary btn-lg" href="test" role="button">Learn more &raquo;</a></p>
         </div>
     </div>
@@ -82,7 +76,7 @@
                         "<p><a class='btn btn-secondary' href='test' role='button'>Més informació &raquo;</a></p>" +
                         "</div>");
                 out.println("</div>");
-            } 
+            }
         %>
         <hr>
 
