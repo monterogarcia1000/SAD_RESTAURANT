@@ -37,9 +37,9 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Chines</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Italia</a>
+                <a class="dropdown-item" href="#">Italià</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Japones</a>
+                <a class="dropdown-item" href="#">Japonés</a>
             </div>
         </div>
     </div>
