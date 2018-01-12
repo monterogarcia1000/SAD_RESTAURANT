@@ -1,4 +1,4 @@
-package com.iesemilidarder.restaurants.web;
+package com.iesemilidarder.restaurants.bl;
 // Objeto para guardar los restaurantes
 
 public class Restaurant {

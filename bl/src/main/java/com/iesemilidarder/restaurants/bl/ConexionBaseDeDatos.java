@@ -1,4 +1,4 @@
-package com.iesemilidarder.restaurants.web;
+package com.iesemilidarder.restaurants.bl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

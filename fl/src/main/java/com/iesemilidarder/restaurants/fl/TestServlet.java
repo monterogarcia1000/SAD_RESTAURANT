@@ -1,4 +1,4 @@
-package com.iesemilidarder.restaurants.web;
+package com.iesemilidarder.restaurants.fl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
